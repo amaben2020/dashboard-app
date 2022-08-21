@@ -50,7 +50,7 @@ export const applyPagination = (
   return products.slice(page * limit, page * limit + limit);
 };
 
-// bridge pattern
+// bridge pattern 🔥: use this pattern often
 export const getInventoryLabel = (
   inventoryType: InventoryType,
 ): JSX.Element => {
