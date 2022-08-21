@@ -6,31 +6,33 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import { Container } from '@material-ui/core';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
 import MainLayout from './layouts/dashboard-layout/main-layout';
 import NavigationBar from './layouts/dashboard-layout/main-layout/navigation-bar';
 import { makeStyles } from '@material-ui/core/styles';
 import { Routes } from './routes';
+import { SnackbarProvider } from 'notistack';
 
 export function App() {
   return (
     <BrowserRouter>
-      <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
-      >
-        <meta name="description" content="A React Boilerplate application" />
-      </Helmet>
-      <NavigationBar />
-      <MainLayout>
-        <Routes />
-      </MainLayout>
-      <GlobalStyle />
+      <SnackbarProvider maxSnack={3}>
+        <Helmet
+          titleTemplate="%s - React Boilerplate"
+          defaultTitle="React Boilerplate"
+        >
+          <meta name="description" content="A React Boilerplate application" />
+        </Helmet>
+        <NavigationBar />
+        <MainLayout>
+          <Routes />
+        </MainLayout>
+        <GlobalStyle />
+      </SnackbarProvider>
     </BrowserRouter>
   );
 }

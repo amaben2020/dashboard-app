@@ -42,9 +42,14 @@ const ProductListView = () => {
     setOpen(!open);
   };
   return (
-    <Page className={classes.root} title="Product List">
+    <Page
+      className={classes.root}
+      title="Product List"
+      style={{ marginLeft: '30' }}
+    >
       <Container maxWidth={false}>
         <Header />
+
         {products && (
           <Box mt={3}>
             <Results products={products} />
