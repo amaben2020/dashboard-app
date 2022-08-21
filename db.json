@@ -124,6 +124,29 @@
       "productSku": "22212",
       "salePrice": 1099,
       "price": 1222
+    },
+    {
+      "attributes": [],
+      "category": "phones",
+      "createdAt": "",
+      "currency": "",
+      "id": "ScCnGWp",
+      "image": "",
+      "inventoryType": "in_stock",
+      "isAvailable": false,
+      "isShippable": false,
+      "name": "Iphone 13 pro max",
+      "quantity": 0,
+      "updatedAt": "",
+      "variants": 0,
+      "description": "<p>This is a cool phone</p>",
+      "images": [],
+      "includesTaxes": false,
+      "isTaxable": true,
+      "productCode": "1222",
+      "productSku": "22212",
+      "salePrice": 2000,
+      "price": 2110
     }
   ]
 }
