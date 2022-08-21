@@ -11,7 +11,7 @@ const Page = forwardRef<HTMLDivElement, Props>(
     return (
       <div ref={ref as any} {...rest}>
         <Helmet>
-          <title>{title}</title>
+          <title>{title} </title>
         </Helmet>
         {children}
       </div>

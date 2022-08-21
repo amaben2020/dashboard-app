@@ -23,7 +23,15 @@ const DashboardDefaultContent = () => {
   const [sales, setSales] = useState<SaleType[]>([]);
 
   useEffect(() => {
-    fetchSales();
+    let isSubscribed = false;
+    if (!isSubscribed) {
+      fetchSales();
+    }
+
+    // RUNS AFTER COMPONENT IS UNMOUNTED
+    return () => {
+      isSubscribed = true;
+    };
   }, []);
 
   const fetchSales = async () => {
