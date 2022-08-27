@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import clsx from 'clsx';
 import numeral from 'numeral';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -38,7 +38,8 @@ import {
   getInventoryLabel,
 } from './TableResultsHelpers';
 import { ProductType } from 'models/product-type';
-
+import { deleteProductAxios } from 'services/productService';
+import { useSnackbar } from 'notistack';
 type Props = {
   className?: string;
   products?: ProductType[];
@@ -46,6 +47,8 @@ type Props = {
 
 const Results = ({ className, products = [], ...rest }: Props) => {
   const classes = useStyles();
+
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
   //Explicitly stating that selectedProducts is an array of type string
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
@@ -156,6 +159,19 @@ we're doing it here just to simulate it */
     selectedProducts.length > 0 && selectedProducts.length < products?.length;
   const selectedAllProducts = selectedProducts.length === products?.length;
 
+  const handleDelete = async () => {
+    try {
+      // trick of deleting items via array of ids
+      return selectedProducts.map(async product => {
+        await deleteProductAxios(product);
+        window.location.reload();
+        enqueueSnackbar('Product deleted');
+      });
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
   return (
     <div>
       <Card className={clsx(classes.root, className)} {...rest}>
@@ -259,7 +275,11 @@ we're doing it here just to simulate it */
                 indeterminate={selectedSomeProducts}
                 onChange={handleSelectAllProducts}
               />
-              <Button variant="outlined" className={classes.bulkAction}>
+              <Button
+                onClick={handleDelete}
+                variant="outlined"
+                className={classes.bulkAction}
+              >
                 Delete
               </Button>
               <Button variant="outlined" className={classes.bulkAction}>
