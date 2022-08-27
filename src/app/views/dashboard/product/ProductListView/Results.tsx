@@ -161,8 +161,8 @@ we're doing it here just to simulate it */
 
   const handleDelete = async () => {
     try {
-      // trick of deleting items via array of ids
-      return selectedProducts.map(async product => {
+      // trick of deleting items via array of ids // you could use forEach or Map
+      return selectedProducts.forEach(async product => {
         await deleteProductAxios(product);
         window.location.reload();
         enqueueSnackbar('Product deleted');
