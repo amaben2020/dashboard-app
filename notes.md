@@ -42,3 +42,8 @@ With this setting enabled, you should see green rectangles flash around componen
 When we render a component, we're calling the function.
 
 React basically renders Derived data to the UI/Browser
+
+Side effects: It is the process that CAN happen or may NOT happen
+in response to a Redux action. Think of it as an action where you’re
+not quite sure what will happen next until you get a response to your
+action.

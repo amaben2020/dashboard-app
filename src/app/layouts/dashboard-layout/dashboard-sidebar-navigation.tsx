@@ -18,6 +18,7 @@ import {
   List as ListIcon,
   FilePlus as FilePlusIcon,
   LogOut as LogOutIcon,
+  Calendar as CalendarIcon,
 } from 'react-feather';
 
 const DashboardSidebarNavigation = () => {
@@ -25,7 +26,7 @@ const DashboardSidebarNavigation = () => {
   const { url } = useRouteMatch();
   const [open, setOpen] = useState(false);
 
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
 
   const handleClick = () => {
     setOpen(!open);
@@ -102,6 +103,16 @@ const DashboardSidebarNavigation = () => {
                 </ListItem>
               </a>
             </List>
+
+            <ListSubheader>Applications</ListSubheader>
+            <Link className={classes.link} to={`${url}/calendar`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <CalendarIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Calendar'} />
+              </ListItem>
+            </Link>
           </div>
         </Drawer>
       </div>

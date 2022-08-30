@@ -147,6 +147,29 @@
       "productSku": "22212",
       "salePrice": 2000,
       "price": 2110
+    },
+    {
+      "attributes": [],
+      "category": "phones",
+      "createdAt": "",
+      "currency": "",
+      "id": "6zdvqw2",
+      "image": "",
+      "inventoryType": "in_stock",
+      "isAvailable": false,
+      "isShippable": false,
+      "name": "MacBook ",
+      "quantity": 0,
+      "updatedAt": "",
+      "variants": 0,
+      "description": "<p>Laptop</p>",
+      "images": [],
+      "includesTaxes": true,
+      "isTaxable": true,
+      "productCode": "1222",
+      "productSku": "22212",
+      "salePrice": 1500,
+      "price": 2333
     }
   ]
 }
