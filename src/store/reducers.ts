@@ -2,9 +2,11 @@
 combineReducers - turns an object whose values are different reducer 
 functions into a single reducer function. */
 import { combineReducers } from '@reduxjs/toolkit';
+import calendarReducer from 'features/calendar/calendarSlice';
 /* injectedReducers - an easier way of registering a reducer */
 const injectedReducers = {
   //reducers here to be added one by one.
+  calendar: calendarReducer,
 };
 /* combineReducers requires an object.we're using the spread operator (...
 injectedReducers) to spread out all the Reducers */

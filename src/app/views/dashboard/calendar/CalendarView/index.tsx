@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { getEvents } from 'features/calendar/calendarSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'store/reducers';
 
 const Index = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getEvents());
+  }, []);
   return (
     <div>
       <h1>Calendar Works!</h1>
