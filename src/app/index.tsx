@@ -16,23 +16,30 @@ import NavigationBar from './layouts/dashboard-layout/main-layout/navigation-bar
 import { makeStyles } from '@material-ui/core/styles';
 import { Routes } from './routes';
 import { SnackbarProvider } from 'notistack';
+import MomentUtils from '@date-io/moment';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 export function App() {
   return (
     <BrowserRouter>
-      <SnackbarProvider maxSnack={3}>
-        <Helmet
-          titleTemplate="%s - React Boilerplate"
-          defaultTitle="React Boilerplate"
-        >
-          <meta name="description" content="A React Boilerplate application" />
-        </Helmet>
-        <NavigationBar />
-        <MainLayout>
-          <Routes />
-        </MainLayout>
-        <GlobalStyle />
-      </SnackbarProvider>
+      <MuiPickersUtilsProvider utils={MomentUtils}>
+        <SnackbarProvider dense maxSnack={3}>
+          <Helmet
+            titleTemplate="%s - React Boilerplate"
+            defaultTitle="React Boilerplate"
+          >
+            <meta
+              name="description"
+              content="A React Boilerplate 
+application"
+            />
+          </Helmet>
+          <MainLayout>
+            <Routes />
+          </MainLayout>
+          <GlobalStyle />
+        </SnackbarProvider>
+      </MuiPickersUtilsProvider>
     </BrowserRouter>
   );
 }
