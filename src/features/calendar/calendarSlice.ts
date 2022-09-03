@@ -201,7 +201,7 @@ export default slice.reducer;
 //Free resources
 //https://www.codecademy.com/courses/learn-redux/lessons/the-redux-toolkit/exercises/return-object-actions
 // https://www.educative.io/courses/building-teslas-battery-range-calculator-with-react-and-redux/7nVVPYOGVPr
-
+// https://bluelight.co/blog/redux-toolkit-with-typescript
 //https://axios-http.com/docs/post_example
 
 // Redux Thunks: Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises.
