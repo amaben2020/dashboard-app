@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import React, { ElementType, ReactNode } from 'react';
 import clsx from 'clsx';
 import moment from 'moment';
