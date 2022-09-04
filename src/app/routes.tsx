@@ -20,6 +20,12 @@ export const Routes = () => {
         />
 
         <Route
+          path={'/login'}
+          exact
+          component={lazy(() => import('./views/pages/LoginPage'))}
+        />
+
+        <Route
           path={'/dashboard'}
           render={({ match: { path } }) => (
             <Dashboard>

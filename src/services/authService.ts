@@ -17,11 +17,7 @@ export const loginAxios = async (userInfo: IUser) => {
   try {
     /*The return object will be an object with an access token of type string. 
     We're expecting an access token from the json-server-auth */
-    const { data } = await axios.post<{ accessToken: string }>(
-      EndPoints.login,
-      userInfo,
-    );
-    return data;
+    await axios.post<{ accessToken: string }>(EndPoints.login, userInfo);
   } catch (error) {
     alert(error.message);
   }
