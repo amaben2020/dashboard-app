@@ -12,6 +12,21 @@ export type RegisterModel = {
   mobile: string;
   policy: boolean;
 };
+
+export type ChangePasswordModel = {
+  email: string;
+  password: string;
+  id: string;
+};
+export async function changePassWordAxios(
+  changePasswordModel: ChangePasswordModel,
+) {
+  return await axios.put<void>(
+    `${EndPoints.users}/${changePasswordModel.id}`,
+    changePasswordModel,
+  );
+}
+
 export const loginAxios = async (userInfo: IUser) => {
   return await api.post<{ accessToken: string }>(EndPoints.login, userInfo);
   // if (!userInfo.hasOwnProperty('email')) return;
