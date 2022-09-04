@@ -39,8 +39,8 @@ const LoginForm = () => {
         password: Yup.string().max(255).required('Password is required'),
       })}
       onSubmit={async (values, formikHelpers) => {
+        console.log(values);
         try {
-          //@ts-ignore
           const { data } = await loginAxios(values);
           saveUserAuthDetails(data);
           formikHelpers.resetForm();

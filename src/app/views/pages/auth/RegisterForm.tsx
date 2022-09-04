@@ -42,8 +42,8 @@ const RegisterForm = () => {
       validationSchema={registerSchema}
       onSubmit={async (values, formikHelpers) => {
         try {
-          //@ts-ignore
           const { data } = await registerAxios(values);
+
           saveUserAuthDetails(data);
           formikHelpers.resetForm();
           formikHelpers.setStatus({ success: true });

@@ -5,6 +5,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import Dashboard from './layouts/dashboard-layout';
 import HomePage from './views/pages/HomePage';
 import NotFoundPage from './views/pages/NotFoundPage';
+import ProtectedRoute from './components/protected-route';
 
 export const Routes = () => {
   return (
@@ -25,7 +26,7 @@ export const Routes = () => {
           component={lazy(() => import('./views/pages/LoginPage'))}
         />
 
-        <Route
+        <ProtectedRoute
           path={'/dashboard'}
           render={({ match: { path } }) => (
             <Dashboard>
@@ -69,6 +70,7 @@ export const Routes = () => {
             </Dashboard>
           )}
         />
+
         {/*eager loading*/}
         <Route path={'/not-found'} component={NotFoundPage} exact />
         <Redirect from={'*'} to={'/not-found'} exact />

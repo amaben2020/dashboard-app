@@ -32,6 +32,8 @@ const DashboardSidebarNavigation = () => {
     setOpen(!open);
   };
 
+  const handleLogout = () => localStorage.clear();
+
   return (
     <>
       <div className={classes.root}>
@@ -94,14 +96,12 @@ const DashboardSidebarNavigation = () => {
                 </List>
               </Collapse>
 
-              <a className={classes.link} href={'/'}>
-                <ListItem button>
-                  <ListItemIcon>
-                    <LogOutIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={'logout'} />
-                </ListItem>
-              </a>
+              <ListItem button onClick={handleLogout}>
+                <ListItemIcon>
+                  <LogOutIcon />
+                </ListItemIcon>
+                <ListItemText primary={'logout'} />
+              </ListItem>
             </List>
 
             <ListSubheader>Applications</ListSubheader>

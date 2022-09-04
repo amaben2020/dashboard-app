@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { EndPoints } from '../api/axios';
+import api, { EndPoints } from '../api/axios';
 
 export interface IUser {
   email: string;
@@ -13,16 +13,20 @@ export type RegisterModel = {
   policy: boolean;
 };
 export const loginAxios = async (userInfo: IUser) => {
-  if (!userInfo.hasOwnProperty('email')) return;
-  try {
-    /*The return object will be an object with an access token of type string. 
-    We're expecting an access token from the json-server-auth */
-    await axios.post<{ accessToken: string }>(EndPoints.login, userInfo);
-  } catch (error) {
-    alert(error.message);
-  }
+  return await api.post<{ accessToken: string }>(EndPoints.login, userInfo);
+  // if (!userInfo.hasOwnProperty('email')) return;
+  // try {
+  //   /*The return object will be an object with an access token of type string.
+  //   We're expecting an access token from the json-server-auth */
+  //   return await axios.post<{ accessToken: string }>(EndPoints.login, userInfo);
+  // } catch (error) {
+  //   alert(error.message);
+  // }
 };
 
 export async function registerAxios(registerModel: RegisterModel) {
-  await axios.post<{ accessToken: string }>(EndPoints.register, registerModel);
+  return await api.post<{ accessToken: string }>(
+    EndPoints.register,
+    registerModel,
+  );
 }
