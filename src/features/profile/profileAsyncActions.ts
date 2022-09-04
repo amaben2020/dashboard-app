@@ -5,6 +5,8 @@ import {
   getUserByIdFromDbAxios,
   putUserFromDbAxios,
 } from 'services/userDBService';
+
+// here, we simply use the service to update the reducer with actual data via the createAsyncThunk function.
 export const getProfileAction = createAsyncThunk(
   ProfileActionTypes.FETCH_AND_SAVE_PROFILE,
   async (id: string) => {
