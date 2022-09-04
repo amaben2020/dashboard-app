@@ -9,7 +9,7 @@ const MainLayout = ({ children }: Props) => {
   const classes = useStyles();
   return (
     <>
-      {/* <NavigationBar /> */}
+      <NavigationBar />
 
       <div className={classes.root}>
         <div className={classes.wrapper}>

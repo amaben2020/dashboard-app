@@ -13,15 +13,24 @@ import {
   Card,
 } from '@material-ui/core';
 import { loginAxios } from 'services/authService';
+import jwt_decode from 'jwt-decode';
+import { useDispatch } from 'react-redux';
+import { saveClaimsAction, saveTokenAction } from 'features/auth/authSlice';
+import { ClaimsType } from 'models/claims-type';
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
   const key = 'token';
   const history = useHistory();
   const [error, setError] = useState('');
 
-  // simply saves the token returned from the server to localStorage
+  // simply saves, dedodes and dispatches the token returned from the server to localStorage and the store
   const saveUserAuthDetails = (data: { accessToken: string }) => {
     localStorage.setItem(key, data.accessToken);
+    const claims: ClaimsType = jwt_decode(data.accessToken);
+    console.log('Claims::', claims); /*just to check it */
+    dispatch(saveTokenAction(data.accessToken));
+    dispatch(saveClaimsAction(claims));
   };
 
   return (
@@ -43,6 +52,7 @@ const LoginForm = () => {
         try {
           const { data } = await loginAxios(values);
           saveUserAuthDetails(data);
+          dispatch(saveTokenAction(data.accessToken));
           formikHelpers.resetForm();
           formikHelpers.setStatus({ success: true });
           formikHelpers.setSubmitting(false);

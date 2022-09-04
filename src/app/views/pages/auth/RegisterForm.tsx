@@ -20,14 +20,23 @@ import {
 import { useHistory } from 'react-router-dom';
 import { registerAxios } from 'services/authService';
 import { registerSchema } from './schema/validationRegisterSchema';
+import { useDispatch } from 'react-redux';
+import { saveClaimsAction, saveTokenAction } from 'features/auth/authSlice';
+import jwt_decode from 'jwt-decode';
+import { ClaimsType } from 'models/claims-type';
 
 const RegisterForm = () => {
+  const dispatch = useDispatch();
   const key = 'token';
   const history = useHistory();
   const [error, setError] = useState('');
   const [isAlertVisible, setAlertVisible] = useState(false);
   const saveUserAuthDetails = (data: { accessToken: string }) => {
     localStorage.setItem(key, data.accessToken);
+    const claims: ClaimsType = jwt_decode(data.accessToken);
+    dispatch(saveClaimsAction(claims));
+    dispatch(saveTokenAction(data.accessToken));
+    console.log('Claims::', claims);
   };
 
   return (

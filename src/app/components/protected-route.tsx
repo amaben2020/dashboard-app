@@ -17,9 +17,13 @@ const ProtectedRoute = props => {
   const expiresAt = decoded.exp * 1000;
   const dateNow = Date.now();
   const isValid = dateNow <= expiresAt;
+
+  // you could use this
+  const shouldRedirect = (today, exp) => (exp <= today ? true : false);
+
   dispatch(saveClaimsAction(decoded));
 
-  return token ? (
+  return isValid ? (
     <Route {...props} />
   ) : (
     <Redirect to={{ pathname: '/login' }} />

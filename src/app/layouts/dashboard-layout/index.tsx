@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 
 import DashboardSidebarNavigation from './dashboard-sidebar-navigation';
+import NavigationBar from './main-layout/navigation-bar';
 
 type Props = {
   children: React.ReactNode;

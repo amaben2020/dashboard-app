@@ -266,6 +266,14 @@
       "mobile": "+34782364823",
       "policy": true,
       "id": "Ewa_5a3"
+    },
+    {
+      "email": "johnnydoe2@yahoo.com",
+      "password": "$2a$10$teiMnwzbPOf.EVOkFgvLg.PcRuSweCXoQo7qt.wlDeIc6uoKexmF.",
+      "name": "John",
+      "mobile": "+34782364823",
+      "policy": true,
+      "id": "4WPKtyo"
     }
   ]
 }
