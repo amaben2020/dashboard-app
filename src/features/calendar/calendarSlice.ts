@@ -51,6 +51,8 @@ required.*/
   // aka case reducers: name holds the value of the string that is used as the prefix for the generated action types.
   // reducer is the complete reducer function (we’ll take a closer look at this in the next exercise).
   // actions holds the the auto-generated action creators.
+
+  /*Non asynchronous actions. Does not require Axios.*/
   reducers: {
     setLoading(state, action: PayloadAction<boolean>) {
       const { payload } = action;

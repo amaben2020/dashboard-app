@@ -4,11 +4,13 @@ functions into a single reducer function. */
 import { combineReducers } from '@reduxjs/toolkit';
 import calendarReducer from 'features/calendar/calendarSlice';
 import profileReducer from 'features/profile/profileSlice';
+import authSlice from 'features/auth/authSlice';
 /* injectedReducers - an easier way of registering a reducer */
 const injectedReducers = {
   //reducers here to be added one by one.
   calendar: calendarReducer,
   profile: profileReducer,
+  auth: authSlice,
 };
 /* combineReducers requires an object.we're using the spread operator (...
 injectedReducers) to spread out all the Reducers */
