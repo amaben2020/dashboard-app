@@ -8,6 +8,8 @@ export const EndPoints = {
   sales: 'sales',
   products: 'products',
   events: 'events',
-  register: 'register',
   login: 'login',
+  register: 'register',
+  users: 'users',
+  usersDb: 'users-db',
 };
