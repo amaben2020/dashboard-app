@@ -5,9 +5,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { colors } from '@material-ui/core';
+import { useSelector } from 'react-redux';
+import { RootState } from 'store/reducers';
+import HeaderProfile from 'app/components/header-profile';
 
 export default function NavigationBar() {
   const classes = useStyles();
+
+  const { claims } = useSelector((state: RootState) => state.auth);
 
   return (
     <div className={classes.root}>
@@ -26,16 +31,22 @@ export default function NavigationBar() {
               About
             </Link>
           </Button>
-          <Button color="inherit">
-            <Link className={classes.link} to={'/dashboard'}>
-              Dashboard
-            </Link>
-          </Button>
-          <Button color="inherit">
-            <Link className={classes.link} to={'/login'}>
-              Login
-            </Link>
-          </Button>
+          {claims ? (
+            <>
+              <Button color="inherit">
+                <Link className={classes.link} to={'/dashboard'}>
+                  Dashboard
+                </Link>
+              </Button>
+              <HeaderProfile />
+            </>
+          ) : (
+            <Button color="inherit">
+              <Link className={classes.link} to={'/login'}>
+                Login
+              </Link>
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </div>
