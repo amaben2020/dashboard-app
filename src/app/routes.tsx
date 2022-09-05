@@ -26,6 +26,12 @@ export const Routes = () => {
           component={lazy(() => import('./views/pages/LoginPage'))}
         />
 
+        <Route
+          path={'/pricing'}
+          exact
+          component={lazy(() => import('./views/pages/pricing/PricingPage'))}
+        />
+
         <ProtectedRoute
           path={'/dashboard'}
           render={({ match: { path } }) => (
@@ -44,6 +50,13 @@ export const Routes = () => {
                     () => import('./views/dashboard/settings-and-privacy'),
                   )}
                   exact
+                />
+                <Route
+                  exact
+                  path={path + '/account'}
+                  component={lazy(
+                    () => import('./views/dashboard/account/AccountView'),
+                  )}
                 />
                 <Route
                   path={path + '/list-products'}
