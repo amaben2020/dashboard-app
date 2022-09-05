@@ -10,7 +10,7 @@ import {
   Typography,
   makeStyles,
 } from '@material-ui/core';
-import Page from 'app/components/page';
+import Page from 'app/components/pages';
 
 const PricingPage = () => {
   const classes = useStyles();
@@ -67,8 +67,6 @@ const PricingPage = () => {
                 </Typography>
                 <Box my={2}>
                   <Divider />
-                  342 Chapter 13 Writing a Profile Form and Syncing It
-                  to Components
                 </Box>
                 <Typography variant="body2" color="textPrimary">
                   20 proposals/month
