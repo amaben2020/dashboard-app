@@ -55,7 +55,7 @@ export const Routes = () => {
                   exact
                   path={path + '/account'}
                   component={lazy(
-                    () => import('./views/dashboard/account/AccountView'),
+                    () => import('./views/dashboard/account/AccountView/index'),
                   )}
                 />
                 <Route
