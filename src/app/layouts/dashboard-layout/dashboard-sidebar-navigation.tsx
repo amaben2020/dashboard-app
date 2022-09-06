@@ -17,8 +17,10 @@ import {
   ChevronDown as ChevronDownIcon,
   List as ListIcon,
   FilePlus as FilePlusIcon,
-  LogOut as LogOutIcon,
   Calendar as CalendarIcon,
+  User as UserIcon,
+  DollarSign as DollarSignIcon,
+  LogOut as LogOutIcon,
 } from 'react-feather';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'store/reducers';
@@ -127,6 +129,41 @@ const DashboardSidebarNavigation = () => {
                 <ListItemText primary={'Calendar'} />
               </ListItem>
             </Link>
+
+            <ListSubheader>Applications</ListSubheader>
+            <Link className={classes.link} to={`${url}/calendar`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <CalendarIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Calendar'} />
+              </ListItem>
+            </Link>
+            <ListSubheader>Pages</ListSubheader>
+            <Link className={classes.link} to={`${url}/account`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <UserIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Account'} />
+              </ListItem>
+            </Link>
+            <Link className={classes.link} to={`/pricing`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <DollarSignIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Pricing'} />
+              </ListItem>
+            </Link>
+            <a className={classes.link} href={'/'}>
+              <ListItem button onClick={handleLogout}>
+                <ListItemIcon>
+                  <LogOutIcon />
+                </ListItemIcon>
+                <ListItemText primary={'logout'} />
+              </ListItem>
+            </a>
           </div>
         </Drawer>
       </div>
