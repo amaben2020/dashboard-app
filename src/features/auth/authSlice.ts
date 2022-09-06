@@ -31,5 +31,6 @@ export const authSlice = createSlice({
 });
 
 /* export all non-async actions, these would be used to update the store with data from components */
+// remember, only payloads can be passed in as arguments
 export const { saveClaimsAction, saveTokenAction } = authSlice.actions;
 export default authSlice.reducer;

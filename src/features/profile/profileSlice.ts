@@ -34,12 +34,15 @@ the Redux Toolkit can already infer what particular state it is. */
       getProfileAction.pending,
       (state, action: PayloadAction) => {
         state.loading = true;
+        state.error = '';
       },
     );
     builder.addCase(
       getProfileAction.fulfilled,
       (state, action: PayloadAction<UserType>) => {
         state.profile = action.payload;
+        state.loading = false;
+        state.error = '';
       },
     );
 

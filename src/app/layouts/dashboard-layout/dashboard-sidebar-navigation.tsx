@@ -20,19 +20,33 @@ import {
   LogOut as LogOutIcon,
   Calendar as CalendarIcon,
 } from 'react-feather';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'store/reducers';
+import { getProfileAction } from 'features/profile/profileAsyncActions';
 
 const DashboardSidebarNavigation = () => {
   const classes = useStyles();
+
+  const dispatch = useDispatch();
+  const { profile } = useSelector((state: RootState) => state.profile);
+  const { claims } = useSelector((state: RootState) => state.auth);
   const { url } = useRouteMatch();
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {}, []);
+  //getting the user with the claims data
+  useEffect(() => {
+    // uses the id to call the endpoint for a user
+    //@ts-ignore
+    dispatch(getProfileAction(claims.sub));
+    //@ts-ignore
+  }, [claims.sub, dispatch]);
 
   const handleClick = () => {
     setOpen(!open);
   };
 
   const handleLogout = () => localStorage.clear();
+  console.log(profile);
 
   return (
     <>
