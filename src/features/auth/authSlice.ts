@@ -29,7 +29,7 @@ export const authSlice = createSlice({
   /*Asynchronous actions. Actions that require Axios.*/
   extraReducers: builder => {},
 });
-console.log('authSlice', authSlice);
+
 /* export all non-async actions, these would be used to update the store with data from components */
 export const { saveClaimsAction, saveTokenAction } = authSlice.actions;
 export default authSlice.reducer;
