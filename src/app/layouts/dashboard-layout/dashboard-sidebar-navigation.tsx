@@ -48,7 +48,6 @@ const DashboardSidebarNavigation = () => {
   };
 
   const handleLogout = () => localStorage.clear();
-  console.log(profile);
 
   return (
     <>
@@ -66,7 +65,20 @@ const DashboardSidebarNavigation = () => {
             className={classes.toolbar}
           >
             <Link to={`${url}`} className={classes.logoWithLink}>
-              Logo
+              {profile ? (
+                <div style={{ display: 'flex' }}>
+                  <div>
+                    <img
+                      style={{ width: 50 }}
+                      src={profile.avatar}
+                      alt={profile.name}
+                    />
+                    <p>{profile.name}</p>
+                  </div>
+                </div>
+              ) : (
+                'logo'
+              )}
             </Link>
           </Toolbar>
           <Divider />
