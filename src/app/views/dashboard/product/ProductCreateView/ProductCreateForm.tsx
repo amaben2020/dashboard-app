@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import clsx from 'clsx';
+
 import { Formik } from 'formik';
 import { useSnackbar } from 'notistack';
 import {
@@ -17,7 +17,6 @@ import {
   Paper,
   TextField,
   Typography,
-  makeStyles,
 } from '@material-ui/core';
 
 import QuillEditor from 'app/components/quill-editor';

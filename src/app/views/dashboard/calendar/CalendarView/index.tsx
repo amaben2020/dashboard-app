@@ -158,6 +158,8 @@ function. This means it speaks to server via axios or fetch */
     <Page className={classes.root} title="Calendar">
       <Container maxWidth={false}>
         <Header onAddClick={handleAddClick} />
+        {error && 'ERROR'}
+        {loading && 'LOADING'}
         <Toolbar
           date={date}
           onDateNext={handleDateNext}

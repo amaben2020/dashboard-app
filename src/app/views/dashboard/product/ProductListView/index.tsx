@@ -20,10 +20,6 @@ const ProductListView = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
   const [open, setOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
   const fetchProducts = async () => {
     handleToggle();
     try {
@@ -34,6 +30,10 @@ const ProductListView = () => {
     }
     handleClose(); // closes backdrop after data fetch
   };
+
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
 
   const handleClose = () => {
     setOpen(false);

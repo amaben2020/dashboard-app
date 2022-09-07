@@ -2,9 +2,6 @@ import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 import 'react-quill/dist/quill.snow.css';
 
-import * as ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import * as serviceWorker from 'serviceWorker';
 import 'sanitize.css/sanitize.css';
 import React from 'react';
 import clsx from 'clsx';

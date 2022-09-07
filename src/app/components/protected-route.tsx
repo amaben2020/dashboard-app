@@ -19,7 +19,7 @@ const ProtectedRoute = props => {
   const isValid = dateNow <= expiresAt;
 
   // you could use this
-  const shouldRedirect = (today, exp) => (exp <= today ? true : false);
+  // const shouldRedirect = (today, exp) => (exp <= today ? true : false);
 
   dispatch(saveClaimsAction(decoded));
 

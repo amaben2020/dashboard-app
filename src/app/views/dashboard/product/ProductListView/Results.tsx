@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, useEffect } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import clsx from 'clsx';
 import numeral from 'numeral';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -48,7 +48,7 @@ type Props = {
 const Results = ({ className, products = [], ...rest }: Props) => {
   const classes = useStyles();
 
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
 
   //Explicitly stating that selectedProducts is an array of type string
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
