@@ -19,7 +19,7 @@ export default function NavigationBar() {
       <AppBar position="static">
         <Toolbar>
           <Link className={`${classes.link} ${classes.title}`} to={'/'}>
-            LOGO
+            LOGOO
           </Link>
           <Button color="inherit">
             <Link className={classes.link} to={'/'}>
