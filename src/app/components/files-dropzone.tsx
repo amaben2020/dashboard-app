@@ -66,7 +66,7 @@ const FilesDropzone = ({ className, ...rest }: Props) => {
           <Box mt={2}>
             <Typography color="textPrimary" variant="body1">
               Drop files here or click <Link underline="always">browse</Link>{' '}
-              through your machine
+              through your machine.
             </Typography>
           </Box>
         </div>
