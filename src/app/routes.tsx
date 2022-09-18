@@ -32,6 +32,12 @@ export const Routes = () => {
           component={lazy(() => import('./views/pages/pricing/PricingPage'))}
         />
 
+        <Route
+          path={'/payment/:price'}
+          exact
+          component={lazy(() => import('./views/pages/payment/PaymentPage'))}
+        />
+
         <ProtectedRoute
           path={'/dashboard'}
           render={({ match: { path } }) => (

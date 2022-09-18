@@ -11,7 +11,6 @@ import {
   Container,
   makeStyles,
 } from '@material-ui/core';
-// import Page from 'app/components/page';
 import { createStyles } from '@material-ui/core/styles';
 import Page from 'app/components/pages';
 
@@ -33,7 +32,7 @@ const ProductListView = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts]);
+  }, []);
 
   const handleClose = () => {
     setOpen(false);
@@ -63,6 +62,7 @@ const ProductListView = () => {
           <CircularProgress color="inherit" />
         </Backdrop>
       </Container>
+      ok
     </Page>
   );
 };

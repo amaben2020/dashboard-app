@@ -11,9 +11,11 @@ import {
   makeStyles,
 } from '@material-ui/core';
 import Page from 'app/components/pages';
+import { useHistory } from 'react-router-dom';
 
 const PricingPage = () => {
   const classes = useStyles();
+  const history = useHistory();
   return (
     <Page className={classes.root} title="Pricing">
       <Container maxWidth="sm">
@@ -84,6 +86,7 @@ const PricingPage = () => {
                   variant="contained"
                   fullWidth
                   className={classes.chooseButton}
+                  onClick={() => history.push('/payment/5')}
                 >
                   Choose
                 </Button>

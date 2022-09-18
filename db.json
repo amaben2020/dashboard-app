@@ -13,22 +13,6 @@
   ],
   "products": [
     {
-      "id": "5ece2c077e39da27658aa8a9",
-      "attributes": ["Cotton"],
-      "category": "dress",
-      "currency": "$",
-      "createdAt": "2021-01-01T12:00:27.87+00:20",
-      "image": null,
-      "inventoryType": "in_stock",
-      "isAvailable": true,
-      "isShippable": false,
-      "name": "Charlie Tulip Dress",
-      "price": 23.99,
-      "quantity": 85,
-      "updatedAt": "2021-01-01T12:00:27.87+00:20",
-      "variants": 2
-    },
-    {
       "id": "5ece2c0d16f70bff2cf86cd8",
       "attributes": ["Cotton"],
       "category": "dress",
@@ -144,6 +128,29 @@
       "productSku": "22212",
       "salePrice": 1500,
       "price": 2333
+    },
+    {
+      "attributes": [],
+      "category": "",
+      "createdAt": "",
+      "currency": "",
+      "id": "IruHTc5",
+      "image": "",
+      "inventoryType": "in_stock",
+      "isAvailable": false,
+      "isShippable": false,
+      "name": "Samurai King Resting",
+      "quantity": 0,
+      "updatedAt": "",
+      "variants": 0,
+      "description": "<p>This is a resting animal</p>",
+      "images": [],
+      "includesTaxes": true,
+      "isTaxable": true,
+      "productCode": "",
+      "productSku": "",
+      "salePrice": 12,
+      "price": 30
     }
   ],
   "events": [
@@ -250,7 +257,6 @@
       "id": "4WPKtyo"
     }
   ],
-
   "users-db": [
     {
       "id": "7fguyfte5",
