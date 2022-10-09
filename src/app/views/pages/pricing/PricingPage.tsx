@@ -152,6 +152,7 @@ const PricingPage = () => {
                   variant="contained"
                   fullWidth
                   className={classes.chooseButton}
+                  onClick={() => history.push('/payment/29')}
                 >
                   Choose
                 </Button>
@@ -214,6 +215,7 @@ const PricingPage = () => {
                   variant="contained"
                   fullWidth
                   className={classes.chooseButton}
+                  onClick={() => history.push('/payment/259')}
                 >
                   Choose
                 </Button>
