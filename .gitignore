@@ -22,3 +22,8 @@ generated-cra-app
 template
 
 .eslintcache
+
+node_modules
+.env
+.env.production
+.env.local
