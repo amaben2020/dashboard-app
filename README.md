@@ -1,38 +1,7 @@
-<img width="914" alt="React Boilerplate Meets CRA" src="https://user-images.githubusercontent.com/3495307/80274591-2d5daa00-86e4-11ea-8fba-404f1cdba87e.png" align="center">
-<br />
-
 <div align="center" >Crafted for <strong>highly scalable</strong> & <strong>performant</strong> and <strong>easily maintainable</strong> React.js applications <br /> 
 with a focus on  
 <strong>best DX</strong> and <strong>best practices</strong>.
 </div>
-
-<br />
-
-<div align="center">
-  <a href="https://github.com/react-boilerplate/react-boilerplate-cra-template/actions?query=workflow%3Abuild">
-    <img src="https://github.com/react-boilerplate/react-boilerplate-cra-template/workflows/build/badge.svg" alt="Build Status" />
-  </a>
-  <a href="https://github.com/react-boilerplate/react-boilerplate-cra-template/actions?query=workflow%3Atests">
-    <img src="https://github.com/react-boilerplate/react-boilerplate-cra-template/workflows/test/badge.svg" alt="Tests Status" />
-  </a>
-  <a href="https://github.com/react-boilerplate/react-boilerplate-cra-template/actions?query=workflow%release">
-    <img src="https://github.com/react-boilerplate/react-boilerplate-cra-template/workflows/release/badge.svg" alt="Release Status" />
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://coveralls.io/github/react-boilerplate/react-boilerplate-cra-template">
-    <img src="https://coveralls.io/repos/github/react-boilerplate/react-boilerplate-cra-template/badge.svg?branch=master" alt="Coverage" />
-  </a>
-  <a href="https://opencollective.com/react-boilerplate">
-    <img src="https://opencollective.com/react-boilerplate/backers/badge.svg" alt="Backers" />
-  </a>
-  <a href="https://opencollective.com/react-boilerplate/">
-    <img src="https://opencollective.com/react-boilerplate/sponsors/badge.svg" alt="Sponsors" />
-  </a>
-</div>
-
-<br />
 
 ---
 
@@ -122,18 +91,7 @@ But wait... there's more!
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/Can-Sahin"><img src="https://avatars2.githubusercontent.com/u/33245689" width="80px;" alt=""/><br /><sub><b>Can Sahin</b></sub></a><br /><a href="https://github.com/react-boilerplate/react-boilerplate-cra-template/commits?author=Can-Sahin" title="Code">💻</a> <a href="https://github.com/react-boilerplate/react-boilerplate-cra-template/commits?author=Can-Sahin" title="Documentation">📖</a> <a href="#ideas-Can-Sahin" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/react-boilerplate/react-boilerplate-cra-template/pulls?q=is%3Apr+reviewed-by%3ACan-Sahin" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/react-boilerplate/react-boilerplate-cra-template/commits?author=Can-Sahin" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/receptiryaki"><img src="https://avatars0.githubusercontent.com/u/3495307" width="80px;" alt=""/><br /><sub><b>Recep Tiryaki</b></sub></a><br /><a href="https://github.com/react-boilerplate/react-boilerplate-cra-template/commits?author=receptiryaki" title="Code">💻</a> <a href="#ideas-receptiryaki" title="Ideas, Planning, & Feedback">🤔</a>
-    <td> 
-    <p> Benneth Uzochukwu </p> 
-    </td>  
-    </td>
-
-    <
-  </tr>
-</table>
+ 
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
